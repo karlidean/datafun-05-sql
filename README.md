@@ -1,5 +1,8 @@
 # datafun-05-sql
 Data Analytics Fundamentals - Week 5 of 7 - Project
+
+# Project Initialization
+
 ## Cloned my Repo from GitHub to my Machine
 1. Copied URL from GitHub
 2. Used following code for implementing to my own machine
