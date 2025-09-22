@@ -13,10 +13,21 @@ git clone URL
 2. Added contents from Dr. Case's example Repo
 3. Add - Commit - Push
 
-## Creating the Virtual Environment
+## Creating the Virtual Environment (Activate EACH TIME you enter the Repo)
 1. Used the following script to create then activate the `.venv`:
 ```shell
 py -m venv .venv
 .\.venv\Scripts\activate
 ```
 2. Add - Commit - Push
+
+## Installed Dependency Packages and Upgrades (Upgrade EACH TIME you enter the Repo)
+1. Upgraded the Setuptools Wheel
+```shell
+pip install --upgrade setuptools wheel
+```
+2. Upgraded the `requirements.txt` imports
+```shell
+pip install --upgrade -r requirements.txt
+```
+3. Add - Commit - Push
