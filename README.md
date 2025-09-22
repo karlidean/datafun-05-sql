@@ -38,4 +38,12 @@ pip install --upgrade -r requirements.txt
 # Project Work
 ## Implementing a Logger
 1. Added `utils_logger.py` to my repo, filling it with contents in the example repo.
+   1. I did this because I believe it will be nice to have later in the project.
 2. Add - Commit - Push
+
+## Planning the Data Sources
+1. Created a folder to house the data.
+   1. This is the `data` folder.
+2. Created a CSV for the authors and books.
+   1. These are called `authors.csv` and `books.csv` respectively and are filled with example data, as this is a guided project.
+3. Add - Commit - Push
