@@ -34,3 +34,8 @@ pip install --upgrade setuptools wheel
 pip install --upgrade -r requirements.txt
 ```
 3. Add - Commit - Push
+
+# Project Work
+## Implementing a Logger
+1. Added `utils_logger.py` to my repo, filling it with contents in the example repo.
+2. Add - Commit - Push
