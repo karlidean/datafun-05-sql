@@ -5,3 +5,65 @@
 2025-09-22 17:04:13.793 | ERROR    | __main__:log_example:56 - This is an example error message.
 2025-09-22 17:04:13.793 | INFO     | __main__:main:68 - View the log output at logs\project_log.log
 2025-09-22 17:04:13.793 | INFO     | __main__:main:69 - EXITING utils_logger.py.
+2025-09-24 16:08:54.991 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-24 16:08:54.993 | INFO     | __main__:main:12 - Database created or opened at project.sqlite3
+2025-09-24 16:08:54.997 | INFO     | __main__:main:23 - Executed 01_drop_tables.sql successfully.
+2025-09-24 16:08:55.015 | INFO     | __main__:main:23 - Executed 02_create_tables.sql successfully.
+2025-09-24 16:08:55.016 | ERROR    | __main__:main:25 - Error executing 03_insert_records.sql: table authors has no column named name
+Traceback (most recent call last):
+
+  File "c:\Repos\datafun-05-sql\create_db.py", line 28, in <module>
+    main()
+    └ <function main at 0x000002ACB3832980>
+
+> File "c:\Repos\datafun-05-sql\create_db.py", line 22, in main
+    conn.executescript(path.read_text(encoding="utf-8"))
+    │    │             │    └ <function Path.read_text at 0x000002ACB3A876A0>
+    │    │             └ WindowsPath('sql_create/03_insert_records.sql')
+    │    └ <method 'executescript' of 'sqlite3.Connection' objects>
+    └ <sqlite3.Connection object at 0x000002ACB5D498A0>
+
+sqlite3.OperationalError: table authors has no column named name
+2025-09-24 16:12:25.373 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-24 16:12:25.376 | INFO     | __main__:main:12 - Database created or opened at authors_books.sqlite3
+2025-09-24 16:12:25.394 | INFO     | __main__:main:23 - Executed 01_drop_tables.sql successfully.
+2025-09-24 16:12:25.407 | INFO     | __main__:main:23 - Executed 02_create_tables.sql successfully.
+2025-09-24 16:12:25.408 | ERROR    | __main__:main:25 - Error executing 03_insert_records.sql: table authors has no column named name
+Traceback (most recent call last):
+
+  File "c:\Repos\datafun-05-sql\create_db.py", line 28, in <module>
+    main()
+    └ <function main at 0x000002D3BC892980>
+
+> File "c:\Repos\datafun-05-sql\create_db.py", line 22, in main
+    conn.executescript(path.read_text(encoding="utf-8"))
+    │    │             │    └ <function Path.read_text at 0x000002D3BCAC76A0>
+    │    │             └ WindowsPath('sql_create/03_insert_records.sql')
+    │    └ <method 'executescript' of 'sqlite3.Connection' objects>
+    └ <sqlite3.Connection object at 0x000002D3BEDB97B0>
+
+sqlite3.OperationalError: table authors has no column named name
+2025-09-24 16:14:20.113 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-24 16:14:20.114 | INFO     | __main__:main:12 - Database created or opened at authors_books.sqlite3
+2025-09-24 16:14:20.127 | INFO     | __main__:main:23 - Executed 01_drop_tables.sql successfully.
+2025-09-24 16:14:20.135 | INFO     | __main__:main:23 - Executed 02_create_tables.sql successfully.
+2025-09-24 16:14:20.152 | ERROR    | __main__:main:25 - Error executing 03_insert_records.sql: unrecognized token: "'16f3e0a1-24cb-4ed6-a50"
+Traceback (most recent call last):
+
+  File "c:\Repos\datafun-05-sql\create_db.py", line 28, in <module>
+    main()
+    └ <function main at 0x000001F114582980>
+
+> File "c:\Repos\datafun-05-sql\create_db.py", line 22, in main
+    conn.executescript(path.read_text(encoding="utf-8"))
+    │    │             │    └ <function Path.read_text at 0x000001F1147B76A0>
+    │    │             └ WindowsPath('sql_create/03_insert_records.sql')
+    │    └ <method 'executescript' of 'sqlite3.Connection' objects>
+    └ <sqlite3.Connection object at 0x000001F116AD97B0>
+
+sqlite3.OperationalError: unrecognized token: "'16f3e0a1-24cb-4ed6-a50"
+2025-09-24 16:15:38.757 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-09-24 16:15:38.759 | INFO     | __main__:main:12 - Database created or opened at authors_books.sqlite3
+2025-09-24 16:15:38.768 | INFO     | __main__:main:23 - Executed 01_drop_tables.sql successfully.
+2025-09-24 16:15:38.778 | INFO     | __main__:main:23 - Executed 02_create_tables.sql successfully.
+2025-09-24 16:15:38.800 | INFO     | __main__:main:23 - Executed 03_insert_records.sql successfully.
