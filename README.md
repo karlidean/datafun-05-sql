@@ -47,3 +47,17 @@ pip install --upgrade -r requirements.txt
 2. Created a CSV for the authors and books.
    1. These are called `authors.csv` and `books.csv` respectively and are filled with example data, as this is a guided project.
 3. Add - Commit - Push
+
+## Planning the Creation Files
+1. Created the `sql_create` folder to house my SQL scripts
+2. Created the following tables named for their purposes
+   1. `01_drop_tables.sql`: drops tables within my database if they already exist
+   2. `02_create_tables.sql`: creates new tables based on data within the repo.
+   3. `03_insert_records.sql`: inserts new records to the table.
+3. These have been populated with content from the example repo.
+4. Add - Commit - Push
+
+## Writing the Setup Script
+1. Created the setup script using pieces from the module workthrough.
+   1. This script creates a database, then creates tables, then inserts records into those tables.
+2. Add - Commit - Push
