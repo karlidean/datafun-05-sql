@@ -1,5 +1,5 @@
- Insert authors data
- INSERT INTO authors (author_id, first, last, year_born)
+-- Insert authors data
+ INSERT INTO authors (author_id, "first", "last", year_born)
  VALUES
     ('10f88232-1ae7-4d88-a6a2-dfcebb22a596', 'Harper', 'Lee', NULL),
     ('c3a47e85-2a6b-4196-a7a8-8b55d8fc1f70', 'George', 'Orwell', NULL),
@@ -13,7 +13,7 @@
     ('6b693b96-394a-4a1d-a4e2-792a47d7a568', 'J.K.', 'Rowling', NULL);
 
 
- Insert books data
+-- Insert books data
  INSERT INTO books (book_id, title, year_published, author_id)
 VALUES
     ('d6f83870-ff21-4a5d-90ab-26a49ab6ed12', 'To Kill a Mockingbird', 1960, '10f88232-1ae7-4d88-a6a2-dfcebb22a596'),

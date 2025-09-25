@@ -52,10 +52,29 @@ def insert_data_from_csv():
     except (sqlite3.Error, pd.errors.EmptyDataError, FileNotFoundError) as e:
         print("Error inserting data:", e)
 
+def insert_sql_data():
+    """Function to read and execute SQL statements to insert data"""
+    # This will insert data from a SQL file to the table.
+    SQL_DATA = ["03_insert_records.sql"] # defining what our variables are
+    try:
+        with sqlite3.connect(db_file) as conn:
+            for name in SQL_DATA:
+                sql_file = pathlib.Path("sql_create", name)  # runs 03
+                if not sql_file.exists():
+                    print(f"Missing SQL file: {sql_file}")
+                    continue
+                with open(sql_file, "r", encoding="utf-8") as file:
+                    sql_script = file.read()
+                conn.executescript(sql_script)
+                print(f"Executed {name} successfully.")
+    except sqlite3.Error as e:
+        print("Error inserting data:", e)
+
 def main():
     create_database()
     create_tables()
     insert_data_from_csv()
+    insert_sql_data()
 
 if __name__ == "__main__":
     main()
