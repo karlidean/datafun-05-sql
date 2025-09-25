@@ -20,7 +20,7 @@ def create_database():
 def create_tables():
     """Function to read and execute SQL statements to create tables"""
     # This will drop any tables in the database, then create new ones.
-    SQL_CREATION = ["01_drop_tables.sql", "02_create_tables.sql"]
+    SQL_CREATION = ["01_drop_tables.sql", "02_create_tables.sql", "03_insert_records.sql"]
     try:
         with sqlite3.connect(db_file) as conn:
             for name in SQL_CREATION:
@@ -35,46 +35,9 @@ def create_tables():
     except sqlite3.Error as e:
         print("Error creating tables:", e)
 
-def insert_data_from_csv():
-    """Function to use pandas to read data from CSV files (in 'data' folder)
-    and insert the records into their respective tables."""
-    try:
-        author_data_path = pathlib.Path("data", "authors.csv")
-        book_data_path = pathlib.Path("data", "books.csv")
-        authors_df = pd.read_csv(author_data_path)
-        books_df = pd.read_csv(book_data_path)
-        with sqlite3.connect(db_file) as conn:
-            # use the pandas DataFrame to_sql() method to insert data
-            # pass in the table name and the connection
-            authors_df.to_sql("authors", conn, if_exists="replace", index=False)
-            books_df.to_sql("books", conn, if_exists="replace", index=False)
-            print("Data inserted successfully.")
-    except (sqlite3.Error, pd.errors.EmptyDataError, FileNotFoundError) as e:
-        print("Error inserting data:", e)
-
-def insert_sql_data():
-    """Function to read and execute SQL statements to insert data"""
-    # This will insert data from a SQL file to the table.
-    SQL_DATA = ["03_insert_records.sql"] # defining what our variables are
-    try:
-        with sqlite3.connect(db_file) as conn:
-            for name in SQL_DATA:
-                sql_file = pathlib.Path("sql_create", name)  # runs 03
-                if not sql_file.exists():
-                    print(f"Missing SQL file: {sql_file}")
-                    continue
-                with open(sql_file, "r", encoding="utf-8") as file:
-                    sql_script = file.read()
-                conn.executescript(sql_script)
-                print(f"Executed {name} successfully.")
-    except sqlite3.Error as e:
-        print("Error inserting data:", e)
-
 def main():
     create_database()
     create_tables()
-    insert_data_from_csv()
-    insert_sql_data()
 
 if __name__ == "__main__":
     main()
