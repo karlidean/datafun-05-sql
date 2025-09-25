@@ -5,4 +5,4 @@
 -- The table you pull from determines what you can pull
 
 -- To avoid duplicates, use the DISTINCT function
-SELECT DISTINCT title FROM books WHERE year_published = 1997;
+-- SELECT DISTINCT title FROM books WHERE year_published = 1997;
