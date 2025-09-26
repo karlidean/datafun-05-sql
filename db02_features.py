@@ -13,7 +13,6 @@ db_file = pathlib.Path("authors_books.sqlite3")
 
 def delete_and_update_records():
     """Function to read and execute SQL statements to create tables"""
-    # This will drop any tables in the database, then create new ones.
     SQL_CHANGES = ["delete_records.sql", "update_records.sql"]
     try:
         with sqlite3.connect(db_file) as conn:

@@ -1,4 +1,4 @@
--- Just uncomment the commands you want to use.
+-- Just uncomment the commands you want to use. This is a file for me, not the project
 
 -- Selecting from ALL of a table (authors, books, etc)
 -- SELECT * FROM authors;
